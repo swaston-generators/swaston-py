@@ -9,15 +9,15 @@ def generate_swaston(s):
     tab_pre = " " * (len(r_spaced_word) - 2)
     tab_post = tab_pre + " "
     upper, lower = [], []
-    size = len(l_word)
-    for c in range(size - 1):
+    length = len(l_word)
+    for c in range(length - 1):
         if c == 0:
             upper.append("{0}{1}{2}\n".format(l_word[c], tab_pre, l_spaced_word))
         else:
             upper.append("{0}{1}{2}{3}\n".format(l_word[c], tab_pre, r_word[c], tab_post))
 
-    for c in range(1, size):
-        if c == size - 1:
+    for c in range(1, length):
+        if c == length - 1:
             lower.append("{0}{1}{2}\n".format(r_spaced_word, tab_pre, r_word[c]))
         else:
             lower.append("{0}{1}{2}{3}\n".format(tab_post, l_word[c], tab_pre, r_word[c]))
