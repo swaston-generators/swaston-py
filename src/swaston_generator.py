@@ -10,7 +10,7 @@ def generate_swaston(s):
     tab_post = tab_pre + " "
     upper, lower = [], []
     size = len(l_word)
-    for c in range(size):
+    for c in range(size - 1):
         if c == 0:
             upper.append("{0}{1}{2}\n".format(l_word[c], tab_pre, l_spaced_word))
         else:
